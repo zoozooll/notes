@@ -585,5 +585,15 @@ page-break-inside: avoid;
 ">
       多线程算法题：国王、毒酒、侍卫
     </h1>      <en-note class="peso"><div class="para"> 国王有一百桶酒，比自己的生命还重要。结果有一天其中一桶被投了慢性毒药，喝了以后半个小时以后就会死掉。</div><div class="para"> 国王大怒，命令玩忽职守的侍卫去试毒。</div><div class="para"> 怎么样才能用最少的侍卫、在最短的时间知道哪桶是毒酒。</div><div class="para"><br></div><div class="para"> 侍卫可以理解为线程，即怎么样用最少的线程用最快的速度完成这个工作。 </div><div class="para"><br></div><div class="para">http://www.iteye.com/topic/1010940</div></en-note>    </div>
-  </body>
+	  <div class="para">100 < 128 = 2^7
+
+找7个侍卫，编号1-7                             1234567
+
+100桶酒，编号1-100
+每个编号表示成2进制，不超过7位，前面补上0成7位，比如0000001
+从第一位到第七位，如果是1，让序号为此位的侍卫喝此酒。
+
+半小时后，哪几个侍卫死了，就在他所在的位置置1，活的置0
+得到一个7位的二进制 0010101，转成十进制，就是有毒的酒桶序号。</div>
+	</body>
 </html>
